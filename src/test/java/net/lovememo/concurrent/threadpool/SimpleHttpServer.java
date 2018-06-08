@@ -14,6 +14,7 @@ public class SimpleHttpServer {
         SimpleHttpServer.setBasePath(SimpleHttpServer.class.getResource("/").getPath());
         SimpleHttpServer.setPort(8088);
         SimpleHttpServer.start();
+        //http://127.0.0.1/8088/index.html
     }
     // 处理HttpRequest的线程池
     static ThreadPool<HttpRequestHandler> threadPool = new DefaultThreadPool<HttpRequestHandler>(11);
