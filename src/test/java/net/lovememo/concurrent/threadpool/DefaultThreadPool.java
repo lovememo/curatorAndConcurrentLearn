@@ -123,7 +123,9 @@ public class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job> 
                 }
                 if(null != job) {
                     try {
+                        System.out.println(Thread.currentThread().getName() + ":  job start. ");
                         job.run();
+                        System.out.println(Thread.currentThread().getName() + ":  job done. ");
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
